@@ -1,0 +1,27 @@
+//1. Sumatoria de Dígitos
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int sumarDigitos(int n);
+
+void main(){
+  int nro, r;
+  cout<<"Introducir un numero: \t";
+  cin>> nro;
+  r = sumarDigitos(nro);
+  cout<<"La suma de los dígitos es: \t"<< r;
+  getch();
+ }
+  
+ int sumarDigitos(int n){
+   int s=0, d;
+   while(n>0){
+     d = n%10;
+     s = s + d;
+     n = n/10;
+   }
+ return(s);
+}

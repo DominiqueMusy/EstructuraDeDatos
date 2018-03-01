@@ -1,0 +1,29 @@
+//2. Invertir el Número
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int invertirDigito (int n);
+
+void main(){
+	int n;
+	cout<<"Ingrese un numero entero";
+	cin>> n;
+	invertirDigito(n);
+	
+	getch();
+}
+
+int invertirDigito (int n){
+	int n, c, z, s=0;
+	while(n>0){
+		c=n%10;
+		s=((s*10)+c);
+		n=n/10;
+	}
+	z=s;
+	cout<<"el numero invertido es: "<< z;
+	return(z);
+}

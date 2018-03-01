@@ -1,0 +1,26 @@
+//6. Comprobar si todo esta en base 8
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main(){
+	int num, dig, contDig = 0;
+	cout<< "Ingrese un numero entero de base 8" <<endl;
+	cin>> num;
+	while(num>0){
+		dig = num%10;
+		cout<<dig;
+		if(dig>7){
+	    contDig = contDig + 1;
+		num = num/10;
+		}
+	}
+	if(contDig>0){
+		cout<< "El numero no es de base 8";
+	}else{
+	    cout<<"el numero es de base 8";
+	getch();
+	}
+}
